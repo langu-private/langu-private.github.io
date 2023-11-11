@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="网络安全,黑客,JAVA安全,代码审计,渗透测试,入侵,SRC,扫描,WEB安全,移动安全,PHP">
+    <meta name="description" content="蓝骨, langu.xyz">
+    <meta name="author" content="langu_xyz">
+    
+        <title>
+            
+                        langu_xyz
+        </title>
+        
+<link rel="stylesheet" href="/css/style.css">
+
+            <link rel="shortcut icon" href="/images/logo.jpeg">
+                
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+                    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"blog.langu.xyz","root":"/","language":"zh","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/logo.jpeg","favicon":"/images/logo.jpeg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg1.svg","description":null},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+
+                    <script>
+                        var _hmt = _hmt || [];
+                        (function() {
+                          var hm = document.createElement("script");
+                          hm.src = "https://hm.baidu.com/hm.js?1cd6e64ff252acf24b707985fcec8850";
+                          var s = document.getElementsByTagName("script")[0]; 
+                          s.parentNode.insertBefore(hm, s);
+                        })();
+                        </script>
+                        
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="langu_xyz" type="application/atom+xml">
+</head>
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                    <a class="logo-title" href="/">
+                        langu_xyz
+                    </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class="active" href="/" >
+                                HOME
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/archives" >
+                                ARCHIVES
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/tags/THINK/" >
+                                THINK
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/about" >
+                                ABOUT
+                            </a>
+                        </li>
+                        
+                            
+                                <li class="menu-item search search-popup-trigger">
+                                    <i class="fas fa-search"></i>
+                                </li>
+                                
+                                
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                    
+                        <div class="icon-item menu-bar">
+                            <div class="menu-bar-middle"></div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active" href="/" >
+                        HOME
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/archives" >
+                        ARCHIVES
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/tags/THINK/" >
+                        THINK
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/about" >
+                        ABOUT
+                    </a>
+                </li>
+                
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/2020%20IoT%20Threat%20Report%20%E8%A7%A3%E8%AF%BB/">
+                        2020 IoT Threat Report 解读
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        今天看到PALO ALTO和Unit 42联合发布了这个不到20页的报告，读了一下，虽然篇幅稍短，但是内容还是很有价值的，结合笔者去年在做的事情，浅薄的解读下，有兴趣的可以阅读原文
+0x01 概要报告主要分为现阶段的IoT安全格局、Top IoT T...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Mar 12 2020 12:00:00 GMT+0800">2020-03-12</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/IoT%E5%AE%89%E5%85%A8/">IoT安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/IoT/">IoT</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/2020%20IoT%20Threat%20Report%20%E8%A7%A3%E8%AF%BB/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8%E8%AF%84%E5%AE%A1%E4%B8%AD%E7%9A%84%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E8%8A%82%E7%82%B9%E5%8F%8A%E6%8A%93%E6%89%8B%E5%AE%9E%E7%8E%B0/">
+                        应用安全评审中的三个关键节点及抓手实现
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        如何快速感知项目立项？如何感知应用上线？如何跟踪应用迭代？越权漏洞频发如何解决？
+
+前言应用安全如何做？这是一个老生常谈的问题，那为什么还要提这个话题呢？在笔者经历了短暂的两年多的应用安全建设来看，SDL的完整落地是一个很大的难题。当然，像其中的培训...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Feb 07 2020 21:00:00 GMT+0800">2020-02-07</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/">应用安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8%E8%AF%84%E5%AE%A1%E4%B8%AD%E7%9A%84%E4%B8%89%E4%B8%AA%E5%85%B3%E9%94%AE%E8%8A%82%E7%82%B9%E5%8F%8A%E6%8A%93%E6%89%8B%E5%AE%9E%E7%8E%B0/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E8%B4%A6%E5%8F%B7%E7%94%9F%E5%91%BD%E5%AE%89%E5%85%A8%E5%91%A8%E6%9C%9F/">
+                        账号生命安全周期
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        注册风险
+垃圾注册
+账号检存
+弱密码
+人机
+
+防护
+滑动验证
+短信验证
+强制改密
+
+授权登入风险
+撞库
+盗号
+弱密码
+人机行为
+
+防护
+强制改密
+滑动验证
+短信验证
+高危账号强制验证或者禁止登陆
+重要账号强制验证
+白名单
+沉睡账号强制验证
+
+登出
+s...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Oct 22 2019 21:00:00 GMT+0800">2019-10-22</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/">安全技术</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Web/">Web</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E8%B4%A6%E5%8F%B7%E7%94%9F%E5%91%BD%E5%AE%89%E5%85%A8%E5%91%A8%E6%9C%9F/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/DGA%20Domain%20Detection/">
+                        DGA Domain Detection
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+0x01 Domain Generating AlgorithmDomain generation algorithms (DGA) are algorithms seen in various families of malware that a...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Aug 24 2019 21:00:00 GMT+0800">2019-08-24</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">安全数据分析</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/ML/">ML</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/DGA%20Domain%20Detection/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/SOAR(%E5%AE%89%E5%85%A8%E7%BC%96%E6%8E%92%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8E%E5%93%8D%E5%BA%94)%E4%B8%AD%E6%B1%82%E8%A7%A3%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E4%B9%8B%E6%B3%95/">
+                        从SOAR(安全编排自动化与响应)中求解安全运营之法
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+
+凡学问者，皆有术法道三大层次。法者，于术精通而升华成理，复以理指导术之提高，学问之提高层次。达于法者，达中乘也。
+
+
+
+0x00 个人理解的企业应用安全建设参与企业应用安全建设两年有余，在公司的应用安全建设比较早期的时候参与进来，最近一年又有幸深...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Aug 08 2019 21:00:00 GMT+0800">2019-08-08</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/">应用安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/SOAR(%E5%AE%89%E5%85%A8%E7%BC%96%E6%8E%92%E8%87%AA%E5%8A%A8%E5%8C%96%E4%B8%8E%E5%93%8D%E5%BA%94)%E4%B8%AD%E6%B1%82%E8%A7%A3%E5%AE%89%E5%85%A8%E8%BF%90%E8%90%A5%E4%B9%8B%E6%B3%95/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/K%20Nearest%20Neighbor/">
+                        K Nearest Neighbor
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        <h4 id="0x01-KNN"><a href="#0x01-KNN" class="headerlink" title="0x01 KNN"></a>0x01 KNN</h4><p>采用测量不同特征值之间的距离进行分类</p>
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Aug 03 2019 21:00:00 GMT+0800">2019-08-03</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">安全数据分析</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/ML/">ML</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/K%20Nearest%20Neighbor/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Decision%20Tree/">
+                        Decision Tree
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        0x01 DT分类算法
+优点
+
+计算复杂度不高
+输出结果易于理解
+中间值缺失不敏感
+可处理不相关特征
+
+缺点
+
+可能会产生过度匹配问题
+
+适用数据类型：
+
+数值型
+标称型
+
+0x02 准备数据算法描述
+1.根节点开始，测试待分类项中相应的特征属性
+
+...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Aug 01 2019 21:00:00 GMT+0800">2019-08-01</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">安全数据分析</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/ML/">ML</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Decision%20Tree/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Naive%20Bayes%EF%BC%88NB%EF%BC%89/">
+                        Naive Bayes（NB）
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        0x01 NB朴素：整个形式化的过程只做最原始、最简单的假设
+优点
+
+数据较少情况下仍然有效
+可以处理多类别问题
+
+缺点
+
+对于输入数据的处理方式比较敏感
+
+适用数据类型
+
+标称型
+
+0x02 贝叶斯决策理论计算数据点属于每个类别的概率，并进行比较，...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Jul 28 2019 21:00:00 GMT+0800">2019-07-28</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">安全数据分析</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/ML/">ML</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Naive%20Bayes%EF%BC%88NB%EF%BC%89/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Logistic%20Regression/">
+                        Logistic Regression
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        0x01 LR根据现有数据对分类边界线建立回归公式，以此进行分类
+LR的目的是寻找一个非线性函数Sigmoid的最佳拟合参数，求解过程可以由最优化 算法来完成在最优化算法中，最常用的就是梯度上升算法，而梯度上升算法又可以简化为随机梯度上升算法
+优点
+...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Jul 27 2019 21:00:00 GMT+0800">2019-07-27</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">安全数据分析</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/ML/">ML</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Logistic%20Regression/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Support%20Vector%20Machines%EF%BC%88SVM%EF%BC%89/">
+                        Support Vector Machines（SVM）
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        0x01 SVM实现算法：序列最小优化（SMO）
+支持向量：离分割超平面最近的那些点
+优点：
+
+范化错误率低
+计算开销不大
+结果易解释
+
+缺点：
+
+对参数调节和核函数的选择敏感
+原始分类器需要修改才能处理多分类问题
+
+适用数据类型：
+
+数值型
+标称型...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Jul 22 2019 21:00:00 GMT+0800">2019-07-22</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">安全数据分析</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/ML/">ML</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Support%20Vector%20Machines%EF%BC%88SVM%EF%BC%89/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator">
+    
+        <a class="prev btn"
+           href="/page/5/"
+        >Prev</a>
+    
+
+    
+        <a class="next btn"
+           href="/page/7/"
+        >Next</a>
+    
+</div>
+
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2016</span>&nbsp;-&nbsp;
+            
+            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a target="_blank" rel="noopener" href="//langu.xyz">AboutME:langu_xyz</a>
+        </div>
+        <!--
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        -->
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts pjax">
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

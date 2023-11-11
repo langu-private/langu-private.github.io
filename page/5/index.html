@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="网络安全,黑客,JAVA安全,代码审计,渗透测试,入侵,SRC,扫描,WEB安全,移动安全,PHP">
+    <meta name="description" content="蓝骨, langu.xyz">
+    <meta name="author" content="langu_xyz">
+    
+        <title>
+            
+                        langu_xyz
+        </title>
+        
+<link rel="stylesheet" href="/css/style.css">
+
+            <link rel="shortcut icon" href="/images/logo.jpeg">
+                
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+                    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"blog.langu.xyz","root":"/","language":"zh","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/logo.jpeg","favicon":"/images/logo.jpeg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg1.svg","description":null},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+
+                    <script>
+                        var _hmt = _hmt || [];
+                        (function() {
+                          var hm = document.createElement("script");
+                          hm.src = "https://hm.baidu.com/hm.js?1cd6e64ff252acf24b707985fcec8850";
+                          var s = document.getElementsByTagName("script")[0]; 
+                          s.parentNode.insertBefore(hm, s);
+                        })();
+                        </script>
+                        
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="langu_xyz" type="application/atom+xml">
+</head>
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                    <a class="logo-title" href="/">
+                        langu_xyz
+                    </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class="active" href="/" >
+                                HOME
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/archives" >
+                                ARCHIVES
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/tags/THINK/" >
+                                THINK
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/about" >
+                                ABOUT
+                            </a>
+                        </li>
+                        
+                            
+                                <li class="menu-item search search-popup-trigger">
+                                    <i class="fas fa-search"></i>
+                                </li>
+                                
+                                
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                    
+                        <div class="icon-item menu-bar">
+                            <div class="menu-bar-middle"></div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active" href="/" >
+                        HOME
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/archives" >
+                        ARCHIVES
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/tags/THINK/" >
+                        THINK
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/about" >
+                        ABOUT
+                    </a>
+                </li>
+                
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/OT%E7%8E%AF%E5%A2%83%E4%B8%8BIoT%E5%AE%89%E5%85%A8%E7%9A%84%E7%A0%B4%E5%B1%80%E6%8E%A2%E7%B4%A2/">
+                        OT环境下IoT安全的破局探索
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        下面的PPT是之前在一次沙龙上分享的，偶然翻到，分享一下
+
+产品链接：https://www.aliyun.com/product/developerservices/cmn (不是广告，而是和云网管合作的一个IoT安全网关产品，作为这个产品的PM，...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Apr 01 2021 21:00:00 GMT+0800">2021-04-01</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%9E%B6%E6%9E%84/">安全架构</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/OT%E7%8E%AF%E5%A2%83%E4%B8%8BIoT%E5%AE%89%E5%85%A8%E7%9A%84%E7%A0%B4%E5%B1%80%E6%8E%A2%E7%B4%A2/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8%E6%96%B9%E6%B3%95%E8%AE%BA%EF%BC%9A%E8%B7%AF%E5%9C%A8%E8%84%9A%E4%B8%8B/">
+                        我的应用安全方法论：路在脚下
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+
+在2020即将结束之际，将自己对于应用安全建设的一些思考记录成此文，与诸位探讨未来的应用安全之路，一家之言，不要当真
+
+
+在前几年，各种文章/会议，每当提起应用安全，PPT总会出现类似的这张图
+
+这几年又都换上了这张图
+
+仿佛用原来的那些安全能力...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Dec 17 2020 21:00:00 GMT+0800">2020-12-17</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/">应用安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E6%88%91%E7%9A%84%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8%E6%96%B9%E6%B3%95%E8%AE%BA%EF%BC%9A%E8%B7%AF%E5%9C%A8%E8%84%9A%E4%B8%8B/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E4%B8%8B%E7%9A%84%E8%B6%8A%E6%9D%83%E9%A3%8E%E9%99%A9/">
+                        微服务架构下的越权风险
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+
+一篇小文，主要是通过安全的视角来简单讨论一下微服务架构下容易出现的一些去权限安全问题，涉及到开发细节说错的时候还望谅解。
+
+
+一、微服务与微服务架构微服务是一种开发软件的架构和组织方法，其中软件由通过明确定义的 API 进行通信的小型独立服务组成...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Oct 20 2020 21:00:00 GMT+0800">2020-10-20</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/">应用安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E4%B8%8B%E7%9A%84%E8%B6%8A%E6%9D%83%E9%A3%8E%E9%99%A9/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/API%E8%B6%8A%E6%9D%83%E9%A3%8E%E9%99%A9%E6%A3%80%E6%B5%8B%E6%96%B9%E5%BC%8F%E6%B5%85%E8%B0%88/">
+                        API越权风险检测方式浅谈
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+0x01 前言越权漏洞相较于SQLInject、XSS、SSRF等漏洞，最大的不同点在于该漏洞和权限的架构设计具有强相关性，而权限的架构设计又强依赖业务属性，这就导致了几乎每个系统的权限架构都各不相同，自动化检测的难度非常之大，误报率非常高；内部的...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Sep 08 2020 21:00:00 GMT+0800">2020-09-08</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/">应用安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/API%E8%B6%8A%E6%9D%83%E9%A3%8E%E9%99%A9%E6%A3%80%E6%B5%8B%E6%96%B9%E5%BC%8F%E6%B5%85%E8%B0%88/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/JavaParse(AST)%E8%8E%B7%E5%8F%96Java%20Web%20API%20list/">
+                        JavaParse(AST)获取Java Web API list
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+分享一个人工审计代码时的小Tips
+在审计一个复杂的Web应用时，可能会有几百个WebAPI，如果没有一个API list，要想不漏掉的审计完还是非常费脑筋的
+0x00 原理通过JavaParse解析Java文件，解析出WebAPI list，简单...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Sep 06 2020 21:00:00 GMT+0800">2020-09-06</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/JAVA%E5%AE%89%E5%85%A8/">JAVA安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/JAVA/">JAVA</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/JavaParse(AST)%E8%8E%B7%E5%8F%96Java%20Web%20API%20list/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E5%88%A9%E7%94%A8CodeQL%E5%AF%BB%E6%89%BEJava%20Deserialization%20Vulnerabilities/">
+                        利用CodeQL寻找Java Deserialization Vulnerabilities
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        Github发布CodeQL后，一直保持着关注，从17年就有类似的想法在尝试，在CodeQL中有很多不谋而合的点，查询语句刚上手虽然有些别扭，稍微适应了下感觉还好，值得好好学习一下
+
+接下来看一下如何发现Java Deserialization Vu...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon May 04 2020 21:00:00 GMT+0800">2020-05-04</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/JAVA%E5%AE%89%E5%85%A8/">JAVA安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/JAVA/">JAVA</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E5%88%A9%E7%94%A8CodeQL%E5%AF%BB%E6%89%BEJava%20Deserialization%20Vulnerabilities/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E5%A5%94%E6%B6%8C%E7%9A%84%E5%90%8E%E6%B5%AA%E4%B8%8E%E7%8B%AC%E7%AB%8B%E6%80%9D%E8%80%83/">
+                        奔涌的后浪与独立思考
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        从小你们就在自由探索自己的兴趣；很多人在童年就进入了不惑之年，不惑于自己喜欢什么，不喜欢什么。
+昨天《后浪》刷屏了朋友圈，笔者也转发了，被何冰老师富有感染力的声音和部分走心的文案戳中
+123自由学习一门语言，学习一门手艺，欣赏一部电影，去遥远的地方旅...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon May 04 2020 21:00:00 GMT+0800">2020-05-04</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/">胡思乱想</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E5%A5%94%E6%B6%8C%E7%9A%84%E5%90%8E%E6%B5%AA%E4%B8%8E%E7%8B%AC%E7%AB%8B%E6%80%9D%E8%80%83/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E9%80%9A%E8%BF%87%E6%B3%A8%E8%A7%A3%E5%88%87%E9%9D%A2%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95%E6%9D%83%E9%99%90%E6%A0%A1%E9%AA%8C/">
+                        通过注解/切面方式实现方法权限校验
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+
+AOP是Spring的灵魂
+
+
+针对于垂直越权以及未授权访问等风险场景，用AOP来做权限校验是个不错的选择，可以使权限校验的代码逻辑更清晰和更具灵活性（就是有时候忘了加注解就很操蛋了，这时候建议在请求入口处做全局基础权限判断来兜底，此处不细讲该方...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Apr 10 2020 21:00:00 GMT+0800">2020-04-10</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/">安全开发</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/JAVA%E5%AE%89%E5%85%A8/">JAVA安全</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E9%80%9A%E8%BF%87%E6%B3%A8%E8%A7%A3%E5%88%87%E9%9D%A2%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95%E6%9D%83%E9%99%90%E6%A0%A1%E9%AA%8C/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E9%80%9A%E8%BF%87%E6%B3%A8%E8%A7%A3%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0%E5%85%A5%E5%8F%82%E8%BF%87%E6%BB%A4(String%E7%B1%BB%E5%9E%8B%E4%B8%BA%E4%BE%8B)/">
+                        通过注解方式实现入参过滤(String类型为例)
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+
+不使用注解的SpringBoot是没有灵魂的
+
+
+在有些场景下，需要对入参进行过滤，例如sql中不能预编译的字段等，这时候可以通过写一个过滤注解，然后只需要将需注解加到想要过滤的字段上，便可以完成预想逻辑的过滤操作。
+1.  创建注解@Targe...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon Apr 06 2020 21:00:00 GMT+0800">2020-04-06</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/">安全开发</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/JAVA%E5%AE%89%E5%85%A8/">JAVA安全</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E9%80%9A%E8%BF%87%E6%B3%A8%E8%A7%A3%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0%E5%85%A5%E5%8F%82%E8%BF%87%E6%BB%A4(String%E7%B1%BB%E5%9E%8B%E4%B8%BA%E4%BE%8B)/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%BC%9A%E5%AF%B9%E6%96%B0%E4%BA%8B%E7%89%A9%E4%BA%A7%E7%94%9F%E6%8A%B5%E8%A7%A6%E5%BF%83%E7%90%86/">
+                        为什么我们会对新事物产生抵触心理
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        当我们做出选择改变时，不知道将会得到什么，但很清楚将会失去什么。
+
+回想一下，是不是或多或少会有一些类似的场景，当出现一个新的偶像明星时，特别是帅的或漂亮的，会迅速的下一个判断，觉得没有真才实学全靠包装，觉得他们的粉丝都是脑残；在玩LOL或王者时，被...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Mar 29 2020 21:00:00 GMT+0800">2020-03-29</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/">胡思乱想</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E4%B8%BA%E4%BB%80%E4%B9%88%E6%88%91%E4%BB%AC%E4%BC%9A%E5%AF%B9%E6%96%B0%E4%BA%8B%E7%89%A9%E4%BA%A7%E7%94%9F%E6%8A%B5%E8%A7%A6%E5%BF%83%E7%90%86/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator">
+    
+        <a class="prev btn"
+           href="/page/4/"
+        >Prev</a>
+    
+
+    
+        <a class="next btn"
+           href="/page/6/"
+        >Next</a>
+    
+</div>
+
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2016</span>&nbsp;-&nbsp;
+            
+            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a target="_blank" rel="noopener" href="//langu.xyz">AboutME:langu_xyz</a>
+        </div>
+        <!--
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        -->
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts pjax">
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

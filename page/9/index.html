@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="网络安全,黑客,JAVA安全,代码审计,渗透测试,入侵,SRC,扫描,WEB安全,移动安全,PHP">
+    <meta name="description" content="蓝骨, langu.xyz">
+    <meta name="author" content="langu_xyz">
+    
+        <title>
+            
+                        langu_xyz
+        </title>
+        
+<link rel="stylesheet" href="/css/style.css">
+
+            <link rel="shortcut icon" href="/images/logo.jpeg">
+                
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+                    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"blog.langu.xyz","root":"/","language":"zh","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/logo.jpeg","favicon":"/images/logo.jpeg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg1.svg","description":null},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+
+                    <script>
+                        var _hmt = _hmt || [];
+                        (function() {
+                          var hm = document.createElement("script");
+                          hm.src = "https://hm.baidu.com/hm.js?1cd6e64ff252acf24b707985fcec8850";
+                          var s = document.getElementsByTagName("script")[0]; 
+                          s.parentNode.insertBefore(hm, s);
+                        })();
+                        </script>
+                        
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="langu_xyz" type="application/atom+xml">
+</head>
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                    <a class="logo-title" href="/">
+                        langu_xyz
+                    </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class="active" href="/" >
+                                HOME
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/archives" >
+                                ARCHIVES
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/tags/THINK/" >
+                                THINK
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/about" >
+                                ABOUT
+                            </a>
+                        </li>
+                        
+                            
+                                <li class="menu-item search search-popup-trigger">
+                                    <i class="fas fa-search"></i>
+                                </li>
+                                
+                                
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                    
+                        <div class="icon-item menu-bar">
+                            <div class="menu-bar-middle"></div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active" href="/" >
+                        HOME
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/archives" >
+                        ARCHIVES
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/tags/THINK/" >
+                        THINK
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/about" >
+                        ABOUT
+                    </a>
+                </li>
+                
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Chrome%20XSS%20Auditor%20Bypass%20Payload/">
+                        Chrome XSS Auditor Bypass Payload
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        测试版本：
+
+测试环境：
+
+===============================
+不需要交互http://115.159.0.191:8080/xss1.php?x=1%22%3E%3Cbr%3E%00%00%00%00%00%00%00%...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Mon May 22 2017 21:00:00 GMT+0800">2017-05-22</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/WEB%E5%AE%89%E5%85%A8/">WEB安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/XSS/">XSS</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Chrome%20XSS%20Auditor%20Bypass%20Payload/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/XSS%20Tips%20%E5%8F%8A%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88/">
+                        XSS Tips 及修复方案
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        关于一些XSS防御的方法
+JSON/JSONP 接口不规范导致 XSS123callback 未转义导致 XSSJSONP 输出开头未换行导致 flash 构造攻击JSON/JSONP 键值未转义导致 XSS
+解决方案：
+1234后端通过 token...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Mar 05 2017 21:00:00 GMT+0800">2017-03-05</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/WEB%E5%AE%89%E5%85%A8/">WEB安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/XSS/">XSS</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/XSS%20Tips%20%E5%8F%8A%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Laravel%20applications%20sensitive%20info%20leak/">
+                        Laravel applications sensitive info leak
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        .env 文件位于项目根目录下，作为全局环境配置文件。
+google hack &quot;DB_PASSWORD&quot; filetype:env
+
+
+以下内容引用自https://www.cnblogs.com/yingww/p/560776...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Feb 26 2017 21:00:00 GMT+0800">2017-02-26</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/">安全技术</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Web/">Web</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Laravel%20applications%20sensitive%20info%20leak/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/CVE-2016-1897-8%20-%20FFMpeg%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/">
+                        CVE-2016-1897/8 - FFMpeg漏洞分析
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        FFmpeg是一套可以用来记录、转换数字音频、视频，并能将其转化为流的开源计算机程序。功能非常强大，是每个视频网站必不可少的多媒体文件处理程序。
+0x01 漏洞概述在FFMpeg2.X 由于在解析HTTP Live Streaming流媒体m3u8文...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Feb 19 2017 21:00:00 GMT+0800">2017-02-19</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/">漏洞分析</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Web/">Web</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/CVE-2016-1897-8%20-%20FFMpeg%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/zabbix%20SQL%20Inject%20Vul/">
+                        zabbix SQL Inject Vul
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        zabbix是一个开源的企业级性能监控解决方案。近日，zabbix的jsrpc的profileIdx2参数存在insert方式的SQL注入漏洞，攻击者无需授权登陆即可登陆zabbix管理系统，也可通过script等功能轻易直接获取zabbix服务器的...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Feb 18 2017 21:00:00 GMT+0800">2017-02-18</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/">漏洞分析</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/PHP/">PHP</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/zabbix%20SQL%20Inject%20Vul/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/PHPMailer%20%3C%205.2.18%20Remote%20Code%20Execution(CVE-2016-10033)/">
+                        PHPMailer &lt; 5.2.18 Remote Code Execution(CVE-2016-10033)
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        关键代码如下
+12345678910111213141516171819202122232425262728293031323334353637protected function mailSend($header, $body)&#123;  $t...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Jan 05 2017 21:00:00 GMT+0800">2017-01-05</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/">安全技术</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/PHP/">PHP</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/PHPMailer%20%3C%205.2.18%20Remote%20Code%20Execution(CVE-2016-10033)/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Local%20File%20Inclusion%20and%20Remote%20File%20Inclusion/">
+                        Local File Inclusion and Remote File Inclusion
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        Local File Inclusion防御策略文件上传
+大小
+类型
+存储位置
+内容安全
+访问权限
+名称随机化
+
+文件下载
+下载路径
+敏感信息
+访问权限
+
+阿里云OSS安全 https://help.aliyun.com/document_detai...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Nov 12 2016 21:00:00 GMT+0800">2016-11-12</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%8A%80%E6%9C%AF/">安全技术</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/Web/">Web</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Local%20File%20Inclusion%20and%20Remote%20File%20Inclusion/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Cross-site%20request%20forgery/">
+                        Cross-site request forgery
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        0x00 什么是CSRFCSRF：Cross-Site Request Forgery，跨站请求伪造
+在OWASP中是这样说的
+12一个跨站请求伪造攻击迫使登录用户的浏览器将伪造的HTTP请求,包括该用户的会话cookie和其他认证信息,发送到一个存...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Nov 01 2016 21:00:00 GMT+0800">2016-11-01</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/WEB%E5%AE%89%E5%85%A8/">WEB安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/CSRF/">CSRF</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Cross-site%20request%20forgery/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Wordpress_Plugin_SinglePersonalMessage1.0.3%20sql%20injection/">
+                        Wordpress_Plugin_SinglePersonalMessage1.0.3 sql injection
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        exploit-db
+12345678910# Exploit Title: Single Personal Message 1.0.3 – Plugin WordPress – Sql Injection# Date: 28/11/2016# Ex...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Oct 27 2016 21:00:00 GMT+0800">2016-10-27</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/">漏洞分析</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/PHP/">PHP</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Wordpress_Plugin_SinglePersonalMessage1.0.3%20sql%20injection/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Joomla!%203.7%20(CVE-2017-8917)%20%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90/">
+                        Joomla! 3.7 (CVE-2017-8917) 代码分析
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        0x00 背景1234Security Risk: SevereExploitation Level: Easy/RemoteDREAD Score: 8.6/10Vulnerability: SQL Injection
+
+
+
+0x01 POC123...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed Oct 19 2016 21:00:00 GMT+0800">2016-10-19</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/">漏洞分析</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/PHP/">PHP</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Joomla!%203.7%20(CVE-2017-8917)%20%E4%BB%A3%E7%A0%81%E5%88%86%E6%9E%90/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator">
+    
+        <a class="prev btn"
+           href="/page/8/"
+        >Prev</a>
+    
+
+    
+        <a class="next btn"
+           href="/page/10/"
+        >Next</a>
+    
+</div>
+
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2016</span>&nbsp;-&nbsp;
+            
+            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a target="_blank" rel="noopener" href="//langu.xyz">AboutME:langu_xyz</a>
+        </div>
+        <!--
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        -->
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts pjax">
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

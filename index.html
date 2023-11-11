@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="网络安全,黑客,JAVA安全,代码审计,渗透测试,入侵,SRC,扫描,WEB安全,移动安全,PHP">
+    <meta name="description" content="蓝骨, langu.xyz">
+    <meta name="author" content="langu_xyz">
+    
+        <title>
+            
+                        langu_xyz
+        </title>
+        
+<link rel="stylesheet" href="/css/style.css">
+
+            <link rel="shortcut icon" href="/images/logo.jpeg">
+                
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+                    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"blog.langu.xyz","root":"/","language":"zh","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/logo.jpeg","favicon":"/images/logo.jpeg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg1.svg","description":null},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+
+                    <script>
+                        var _hmt = _hmt || [];
+                        (function() {
+                          var hm = document.createElement("script");
+                          hm.src = "https://hm.baidu.com/hm.js?1cd6e64ff252acf24b707985fcec8850";
+                          var s = document.getElementsByTagName("script")[0]; 
+                          s.parentNode.insertBefore(hm, s);
+                        })();
+                        </script>
+                        
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="langu_xyz" type="application/atom+xml">
+</head>
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+        <div class="first-screen-container flex-center fade-in-down-animation">
+    <div class="content flex-center">
+        <div class="description">
+            
+        </div>
+        
+    </div>
+</div>
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content has-first-screen">
+        <div class="left">
+            
+                    <a class="logo-title" href="/">
+                        langu_xyz
+                    </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class="active" href="/" >
+                                HOME
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/archives" >
+                                ARCHIVES
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/tags/THINK/" >
+                                THINK
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/about" >
+                                ABOUT
+                            </a>
+                        </li>
+                        
+                            
+                                <li class="menu-item search search-popup-trigger">
+                                    <i class="fas fa-search"></i>
+                                </li>
+                                
+                                
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                    
+                        <div class="icon-item menu-bar">
+                            <div class="menu-bar-middle"></div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active" href="/" >
+                        HOME
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/archives" >
+                        ARCHIVES
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/tags/THINK/" >
+                        THINK
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/about" >
+                        ABOUT
+                    </a>
+                </li>
+                
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E8%A1%A8%E8%BE%BE%E6%AC%B2%E4%B8%8D%E8%A7%81%E4%BA%86/">
+                        表达欲不见了
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        这遍文字在很久之前就想写一写，但不幸的是，表达欲它转身走开了，也就搁置了现在你们能在这里看到这篇文字，说明我正在努力的寻找它回来好像不只有它，还有它们，许多和我一样不幸的人失去了它它们去了很远很远的地方，我要去找他们回来
+至于它为什么会离开，这就要说...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Nov 11 2023 21:50:00 GMT+0800">2023-11-11</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/">胡思乱想</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E8%A1%A8%E8%BE%BE%E6%AC%B2%E4%B8%8D%E8%A7%81%E4%BA%86/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E9%9A%8F%E7%AC%94%E6%9D%A5%E6%9B%B4%E5%A5%BD%E7%9A%84%E6%80%9D%E8%80%83/">
+                        如何通过随笔来更好的思考
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        每天都在接收大量的信息，工作、新闻、八卦、鸡汤、生活小知识、梦、生活片段、心情变化、奇思妙想…….
+但是这些信息，就像水一样，流过之后，仿佛什么都没有留下
+可能尝试过无数次记录，可能尝试过完美的分类，但是会发现将记录放在哪个分类里本身就是一件困难的事...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Nov 11 2023 00:50:00 GMT+0800">2023-11-11</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/">胡思乱想</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87%E9%9A%8F%E7%AC%94%E6%9D%A5%E6%9B%B4%E5%A5%BD%E7%9A%84%E6%80%9D%E8%80%83/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E4%BA%94%E5%B9%B4%E9%99%88/">
+                        五年陈
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        朋友圈看到好多前同事晒五年陈的戒指
+些许恍惚
+如果没有离职，今天大概也拿到那枚戒指了
+记忆扑面而来
+掰着指头算算
+去离之间，也度过了五个春秋
+两年成长，三载磨砺，转瞬即逝
+这酒或许陈了吧，阿里味
+
+“在这里，没有人会主动给你具体的任务的”
+原话记不清...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Jul 04 2023 20:00:00 GMT+0800">2023-07-04</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/">胡思乱想</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E4%BA%94%E5%B9%B4%E9%99%88/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E4%B8%8D%E7%9F%A5%E5%91%BD%EF%BC%8C%E6%97%A0%E4%BB%A5%E4%B8%BA%E5%90%9B%E5%AD%90%E4%B9%9F/">
+                        不知命，无以为君子也
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        标题取自《论语》孔子曰：“不知命，无以为君子也；不知礼，无以立也；不知言，无以知人也。”
+何谓“命”？
+《中庸》开篇的第一句话就是：“天命之谓性，率性之谓道”。
+《庄子》“死生存亡，穷达贫富，贤与不肖毁誉，饥渴寒暑，是事之变，命之行也。”
+老子曰：“...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Jun 13 2023 21:00:00 GMT+0800">2023-06-13</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/">胡思乱想</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E4%B8%8D%E7%9F%A5%E5%91%BD%EF%BC%8C%E6%97%A0%E4%BB%A5%E4%B8%BA%E5%90%9B%E5%AD%90%E4%B9%9F/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Apple%20Vision%20Pro%E6%B2%BB%E5%A5%BD%E4%BA%86%E6%88%91%E7%9A%84%E7%94%B5%E5%AD%90ED/">
+                        AV Pro治好了我的电子ED
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        不知道在多久以前，我发现自己ED了，当然是电子的(不过刚阳完，硬件还行不行说不准了)，无论是游戏还是电子设备，都突然失去了兴趣。
+举几个例子，买了十几张NS游戏，可是几乎都没玩超过1小时，现在家里的两台电脑还分别是垃圾桶Mac Pro 2013和Ma...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Jun 06 2023 20:00:00 GMT+0800">2023-06-06</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/">胡思乱想</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Apple%20Vision%20Pro%E6%B2%BB%E5%A5%BD%E4%BA%86%E6%88%91%E7%9A%84%E7%94%B5%E5%AD%90ED/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E6%9C%AC%E6%9D%A5%E6%97%A0%E4%B8%80%E7%89%A9%EF%BC%8C%E4%BD%95%E5%A4%84%E6%83%B9%E5%B0%98%E5%9F%83/">
+                        本来无一物，何处惹尘埃
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        除了存在于人类共同的想象之外，这个宇宙中根本没有神、没有国家、没有钱、没有人权、没有法律，也没有正义。不管是自由人／奴隶、白人／黑人、富人／穷人，都只是虚构的想象所建构出来的。国家、神祇、公司、金钱、意识形态——都是我们创造并相信的集体幻影，人类历史...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Jun 03 2023 20:00:00 GMT+0800">2023-06-03</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/">胡思乱想</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E6%9C%AC%E6%9D%A5%E6%97%A0%E4%B8%80%E7%89%A9%EF%BC%8C%E4%BD%95%E5%A4%84%E6%83%B9%E5%B0%98%E5%9F%83/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/FlashLoan%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/">
+                        FlashLoan的实现过程
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        闪电贷主要由借贷方和放贷方两部分构成，放贷方部署放贷合约，借贷方部署借贷合约，通过借贷合约去调用放贷合约实现，大致流程如下图。
+
+这里我们使用aave https://docs.aave.com/developers/guides/flash-loa...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Apr 01 2023 21:00:00 GMT+0800">2023-04-01</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%BC%80%E5%8F%91/">开发</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/BlockChain/">BlockChain</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/FlashLoan%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E6%9C%AA%E6%9D%A5%E5%B7%B2%E6%9D%A5%EF%BC%8C%E4%BB%8E%E6%99%BA%E4%BA%BA%E5%88%B0%E6%99%BA%E8%83%BD/">
+                        未来已来，从智人到智能
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+说来也巧，从ChatGPT3.5发布前后的差不多日子，我打开了人类简史这本书，到ChatGPT4发布的时候读完，这种感觉很奇妙，一边回顾着从智人到现代人类的7万年，一边经历着或许是人类的重大转折点，震撼、恐惧、担忧、期待的情绪轮番涌上心头。
+历史上...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Jan 03 2023 21:00:00 GMT+0800">2023-01-03</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E8%83%A1%E6%80%9D%E4%B9%B1%E6%83%B3/">胡思乱想</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E6%9C%AA%E6%9D%A5%E5%B7%B2%E6%9D%A5%EF%BC%8C%E4%BB%8E%E6%99%BA%E4%BA%BA%E5%88%B0%E6%99%BA%E8%83%BD/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E9%9D%A2%E5%90%91%E5%AE%9E%E6%88%98%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB%E5%8D%87%E7%BA%A7&HW%E5%87%86%E5%A4%87/">
+                        面向实战的基础安全体系升级&amp;HW准备
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        时隔一年多，在2023年初放出来，和过去说声再见，新的一年，是时候向新的大海航行了
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Jan 01 2023 21:00:00 GMT+0800">2023-01-01</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%BA%94%E7%94%A8%E5%AE%89%E5%85%A8/">应用安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/THINK/">THINK</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E9%9D%A2%E5%90%91%E5%AE%9E%E6%88%98%E7%9A%84%E5%9F%BA%E7%A1%80%E5%AE%89%E5%85%A8%E4%BD%93%E7%B3%BB%E5%8D%87%E7%BA%A7&HW%E5%87%86%E5%A4%87/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Aurora%20%E8%B7%A8%E9%93%BE%E6%A1%A5%E9%94%80%E6%AF%81%E9%80%BB%E8%BE%91%E9%94%99%E8%AF%AF%E5%AF%BC%E8%87%B4%E6%97%A0ETH%E8%86%A8%E8%83%80%E6%BC%8F%E6%B4%9E/">
+                        Aurora 跨链桥销毁逻辑错误导致无ETH膨胀漏洞
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        Aurora EVM 最初由 NEAR 内部开发，是 NEAR 生态系统的官方 EVM。它实现了与以太坊协议的 1:1 体验，包括采用 ETH 作为基础货币。除了基本范围之外，EVM 还允许进行额外的预编译。此类预编译使 EVM 能够与 NEAR 生...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Nov 25 2022 21:00:00 GMT+0800">2022-11-25</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%8C%BA%E5%9D%97%E9%93%BE/">区块链</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/%E6%BC%8F%E6%B4%9E%E5%88%86%E6%9E%90/">漏洞分析</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Aurora%20%E8%B7%A8%E9%93%BE%E6%A1%A5%E9%94%80%E6%AF%81%E9%80%BB%E8%BE%91%E9%94%99%E8%AF%AF%E5%AF%BC%E8%87%B4%E6%97%A0ETH%E8%86%A8%E8%83%80%E6%BC%8F%E6%B4%9E/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator">
+    
+
+    
+        <a class="next btn"
+           href="/page/2/"
+        >Next</a>
+    
+</div>
+
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2016</span>&nbsp;-&nbsp;
+            
+            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a target="_blank" rel="noopener" href="//langu.xyz">AboutME:langu_xyz</a>
+        </div>
+        <!--
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        -->
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts pjax">
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>

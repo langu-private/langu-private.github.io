@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="网络安全,黑客,JAVA安全,代码审计,渗透测试,入侵,SRC,扫描,WEB安全,移动安全,PHP">
+    <meta name="description" content="蓝骨, langu.xyz">
+    <meta name="author" content="langu_xyz">
+    
+        <title>
+            
+                        langu_xyz
+        </title>
+        
+<link rel="stylesheet" href="/css/style.css">
+
+            <link rel="shortcut icon" href="/images/logo.jpeg">
+                
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+                    <script id="hexo-configurations">
+    let KEEP = window.KEEP || {};
+    KEEP.hexo_config = {"hostname":"blog.langu.xyz","root":"/","language":"zh","path":"search.json"};
+    KEEP.theme_config = {"toc":{"enable":true,"number":false,"expand_all":false,"init_open":true},"style":{"primary_color":"#0066CC","avatar":"/images/logo.jpeg","favicon":"/images/logo.jpeg","article_img_align":"left","left_side_width":"260px","content_max_width":"920px","hover":{"shadow":true,"scale":false},"first_screen":{"enable":true,"background_img":"/images/bg1.svg","description":null},"scroll":{"progress_bar":{"enable":true},"percent":{"enable":false}}},"local_search":{"enable":true,"preload":true},"code_copy":{"enable":true,"style":"default"},"pjax":{"enable":true},"lazyload":{"enable":true},"version":"3.4.3"};
+    KEEP.language_ago = {"second":"%s seconds ago","minute":"%s minutes ago","hour":"%s hours ago","day":"%s days ago","week":"%s weeks ago","month":"%s months ago","year":"%s years ago"};
+  </script>
+
+                    <script>
+                        var _hmt = _hmt || [];
+                        (function() {
+                          var hm = document.createElement("script");
+                          hm.src = "https://hm.baidu.com/hm.js?1cd6e64ff252acf24b707985fcec8850";
+                          var s = document.getElementsByTagName("script")[0]; 
+                          s.parentNode.insertBefore(hm, s);
+                        })();
+                        </script>
+                        
+<meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="langu_xyz" type="application/atom+xml">
+</head>
+<body>
+<div class="progress-bar-container">
+    
+        <span class="scroll-progress-bar"></span>
+    
+
+    
+        <span class="pjax-progress-bar"></span>
+        <span class="pjax-progress-icon">
+            <i class="fas fa-circle-notch fa-spin"></i>
+        </span>
+    
+</div>
+
+
+<main class="page-container">
+
+    
+
+    <div class="page-main-content">
+
+        <div class="page-main-content-top">
+            <header class="header-wrapper">
+
+    <div class="header-content">
+        <div class="left">
+            
+                    <a class="logo-title" href="/">
+                        langu_xyz
+                    </a>
+        </div>
+
+        <div class="right">
+            <div class="pc">
+                <ul class="menu-list">
+                    
+                        <li class="menu-item">
+                            <a class="active" href="/" >
+                                HOME
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/archives" >
+                                ARCHIVES
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/tags/THINK/" >
+                                THINK
+                            </a>
+                        </li>
+                        
+                        <li class="menu-item">
+                            <a class="" href="/about" >
+                                ABOUT
+                            </a>
+                        </li>
+                        
+                            
+                                <li class="menu-item search search-popup-trigger">
+                                    <i class="fas fa-search"></i>
+                                </li>
+                                
+                                
+                </ul>
+            </div>
+            <div class="mobile">
+                
+                    <div class="icon-item search search-popup-trigger"><i class="fas fa-search"></i></div>
+                    
+                        <div class="icon-item menu-bar">
+                            <div class="menu-bar-middle"></div>
+                        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list">
+            
+                <li class="drawer-menu-item flex-center">
+                    <a class="active" href="/" >
+                        HOME
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/archives" >
+                        ARCHIVES
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/tags/THINK/" >
+                        THINK
+                    </a>
+                </li>
+                
+                <li class="drawer-menu-item flex-center">
+                    <a class="" href="/about" >
+                        ABOUT
+                    </a>
+                </li>
+                
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+        </div>
+
+        <div class="page-main-content-middle">
+
+            <div class="main-content">
+
+                
+                    <div class="home-content-container fade-in-down-animation">
+    <ul class="home-article-list">
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Linear%20Regression/">
+                        Linear Regression
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        0x01 LR回归的目的是预测数值型的目标值
+线性回归意味着可以将输入项分别乘以一些常量，再将结果加起来得到输出
+优点：
+
+结果易于理解
+计算不复杂
+
+缺点：
+
+对非线性数据拟合不好
+
+适用数据类型
+
+标称型
+数值型
+
+0x02 最佳拟合直线将数据视...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Jul 21 2019 21:00:00 GMT+0800">2019-07-21</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">安全数据分析</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/ML/">ML</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Linear%20Regression/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/NodeJS%20sql%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%AE%A1%E8%AE%A1%E5%92%8C%E4%BF%AE%E5%A4%8D/">
+                        NodeJS sql注入漏洞审计和修复
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        一、问题代码123456789101112131415async search(  ……  let rows = await getManager().query(`    SELECT DISTINCT(id),        name,     ...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed May 01 2019 21:00:00 GMT+0800">2019-05-01</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/WEB%E5%AE%89%E5%85%A8/">WEB安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/NodeJS/">NodeJS</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/NodeJS%20sql%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E%E5%AE%A1%E8%AE%A1%E5%92%8C%E4%BF%AE%E5%A4%8D/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/URLDNS%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96gadget%E5%88%86%E6%9E%90/">
+                        URLDNS反序列化gadget分析
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        0x00 分析gadget代码ysoserial中URLDNS gadget代码只有短短几行
+123456789101112131415URLStreamHandler handler = new SilentURLStreamHandler();·...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue Jan 15 2019 21:00:00 GMT+0800">2019-01-15</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/JAVA%E5%AE%89%E5%85%A8/">JAVA安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/JAVA/">JAVA</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/URLDNS%E5%8F%8D%E5%BA%8F%E5%88%97%E5%8C%96gadget%E5%88%86%E6%9E%90/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Security%20&%20Data/">
+                        Security &amp; Data
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sat Jul 21 2018 21:00:00 GMT+0800">2018-07-21</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90/">安全数据分析</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/ML/">ML</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Security%20&%20Data/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Groovy%20Deserialization(groovy.util.Expando)CVE-2015-3253/">
+                        Groovy Deserialization(groovy.util.Expando)CVE-2015-3253
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        http://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2015-3253
+影响版本（1.7.0~2.4.3）
+调用链分析MethodClosure
+1234567891011121314151617181...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Thu Jun 21 2018 21:00:00 GMT+0800">2018-06-21</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/JAVA%E5%AE%89%E5%85%A8/">JAVA安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/JAVA/">JAVA</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Groovy%20Deserialization(groovy.util.Expando)CVE-2015-3253/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/%E5%9F%BA%E4%BA%8Etoken%E7%9A%84%E8%AE%A4%E8%AF%81/">
+                        基于token的认证
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        0x01 cookie/session说到token就必然绕不开cookie和session。
+cookie：由服务端给客户端颁发的一张通行证，用来验证客户端的身份，本质上是一段在浏览器上以KV形式存储的文本数据，包含了session相关信息。用于解...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri May 18 2018 21:00:00 GMT+0800">2018-05-18</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%AE%89%E5%85%A8%E5%BC%80%E5%8F%91/">安全开发</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/DEV/">DEV</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/%E5%9F%BA%E4%BA%8Etoken%E7%9A%84%E8%AE%A4%E8%AF%81/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/XXE%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E5%92%8C%E9%98%B2%E5%BE%A1%E7%AD%96%E7%95%A5%20for%20Java/">
+                        XXE代码审计和防御策略 for Java
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        1、Java代码中的XXE触发点XXE的产生需要满足：1. 接收外部传入的XML格式，2.未禁用外部实体。
+123456789101112131415161718JAXP DocumentBuilderFactory, SAXParserFactor...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Wed May 16 2018 21:00:00 GMT+0800">2018-05-16</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/JAVA%E5%AE%89%E5%85%A8/">JAVA安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/JAVA/">JAVA</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/XXE%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E5%92%8C%E9%98%B2%E5%BE%A1%E7%AD%96%E7%95%A5%20for%20Java/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/SSRF%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E5%92%8C%E9%98%B2%E5%BE%A1%E7%AD%96%E7%95%A5%20for%20Java/">
+                        SSRF代码审计和防御策略 for Java
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        1、Java代码中的SSRF触发点SSRF的产生需要满足两个点：1. 接收外部传入的地址，2.发送请求。
+URLHttpClientHttpURLConnectionImageIODriverManagerSocketOkHttpClient……
+2...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Tue May 15 2018 21:00:00 GMT+0800">2018-05-15</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/JAVA%E5%AE%89%E5%85%A8/">JAVA安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/JAVA/">JAVA</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/SSRF%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1%E5%92%8C%E9%98%B2%E5%BE%A1%E7%AD%96%E7%95%A5%20for%20Java/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="/Flask%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92%E7%9A%84%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%96%B9%E5%BC%8F/">
+                        Flask前后端数据交互的几种常见方式
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        前后端数据交互
+jquery ajaxPost方式
+
+获取input value的几种方式：
+12345$(&quot; #name &quot;).val()$(&quot; input[ name=&#x27;name&#x27; ] &quot...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Sun Apr 22 2018 21:00:00 GMT+0800">2018-04-22</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/%E5%BC%80%E5%8F%91/">开发</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/dev/">dev</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="/Flask%E5%89%8D%E5%90%8E%E7%AB%AF%E6%95%B0%E6%8D%AE%E4%BA%A4%E4%BA%92%E7%9A%84%E5%87%A0%E7%A7%8D%E5%B8%B8%E8%A7%81%E6%96%B9%E5%BC%8F/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+            <li class="home-article-item">
+
+                
+
+                <h3 class="home-article-title">
+                    <a href="CVE-2018-1273: RCE with Spring Data Commons/">
+                        CVE-2018-1273 RCE with Spring Data Commons
+                    </a>
+                </h3>
+
+                <div class="home-article-content markdown-body">
+                    
+                        
+补丁分析https://github.com/spring-projects/spring-data-commons/commit/ae1dd2741ce06d44a0966ecbd6f47beabde2b653
+
+这里和CVE-2018-1270...
+                    
+                </div>
+
+                <div class="home-article-meta-info-container">
+    <div class="home-article-meta-info">
+        <span><i class="fas fa-history"></i>&nbsp;<span class="home-article-date" data-date="Fri Apr 13 2018 21:00:00 GMT+0800">2018-04-13</span></span>
+        
+            <span class="home-article-category"><i class="fas fa-folder"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/categories/JAVA%E5%AE%89%E5%85%A8/">JAVA安全</a>&nbsp;
+                        </li>
+                    
+                    
+                </ul>
+            </span>
+        
+        
+            <span class="home-article-tag">
+                <i class="fas fa-tags"></i>&nbsp;
+                <ul>
+                    
+                        <li>
+                            
+                            <a href="/tags/JAVA/">JAVA</a>&nbsp;
+                        </li>
+                    
+                </ul>
+            </span>
+        
+    </div>
+
+    <a href="CVE-2018-1273: RCE with Spring Data Commons/">Read more&nbsp;<i class="fas fa-angle-right"></i></a>
+</div>
+
+            </li>
+        
+    </ul>
+
+    <div class="home-paginator">
+        <div class="paginator">
+    
+        <a class="prev btn"
+           href="/page/6/"
+        >Prev</a>
+    
+
+    
+        <a class="next btn"
+           href="/page/8/"
+        >Next</a>
+    
+</div>
+
+    </div>
+</div>
+
+
+                
+            </div>
+
+        </div>
+
+        <div class="page-main-content-bottom">
+            <footer class="footer">
+    <div class="info-container">
+        <div class="copyright-info info-item">
+            &copy;
+            
+              <span>2016</span>&nbsp;-&nbsp;
+            
+            2023&nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;<a target="_blank" rel="noopener" href="//langu.xyz">AboutME:langu_xyz</a>
+        </div>
+        <!--
+            <script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <div class="website-count info-item">
+                
+                    <span id="busuanzi_container_site_uv">
+                        Visitor Count&nbsp;<span id="busuanzi_value_site_uv"></span>&ensp;
+                    </span>
+                
+                
+                    <span id="busuanzi_container_site_pv">
+                        Totalview&nbsp;<span id="busuanzi_value_site_pv"></span>
+                    </span>
+                
+            </div>
+        -->
+        <div class="theme-info info-item">
+            Powered by <a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;|&nbsp;Theme&nbsp;<a class="theme-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep v3.4.3</a>
+        </div>
+        
+    </div>
+</footer>
+
+        </div>
+    </div>
+
+    
+
+    <div class="right-bottom-side-tools">
+        <div class="side-tools-container">
+    <ul class="side-tools-list">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <li class="tools-item tool-expand-width flex-center">
+            <i class="fas fa-arrows-alt-h"></i>
+        </li>
+
+        <li class="tools-item tool-dark-light-toggle flex-center">
+            <i class="fas fa-moon"></i>
+        </li>
+
+        <!-- rss -->
+        
+            <li class="tools-item rss flex-center">
+                <a class="flex-center"
+                   href="/atom.xml"
+                   target="_blank"
+                >
+                    <i class="fas fa-rss"></i>
+                </a>
+            </li>
+        
+
+        
+            <li class="tools-item tool-scroll-to-top flex-center">
+                <i class="fas fa-arrow-up"></i>
+            </li>
+        
+
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list">
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+        
+    </ul>
+</div>
+
+    </div>
+
+    
+
+    <div class="image-viewer-container">
+    <img src="">
+</div>
+
+
+    
+        <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+          <span class="search-input-field-pre">
+            <i class="fas fa-keyboard"></i>
+          </span>
+            <div class="search-input-container">
+                <input autocomplete="off"
+                       autocorrect="off"
+                       autocapitalize="off"
+                       placeholder="Search..."
+                       spellcheck="false"
+                       type="search"
+                       class="search-input"
+                >
+            </div>
+            <span class="popup-btn-close">
+                <i class="fas fa-times"></i>
+            </span>
+        </div>
+        <div id="search-result">
+            <div id="no-result">
+                <i class="fas fa-spinner fa-pulse fa-5x fa-fw"></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+</main>
+
+
+
+
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/dark-light-toggle.js"></script>
+
+
+
+    
+<script src="/js/local-search.js"></script>
+
+
+
+
+    
+<script src="/js/code-copy.js"></script>
+
+
+
+
+    
+<script src="/js/lazyload.js"></script>
+
+
+
+<div class="post-scripts pjax">
+    
+</div>
+
+
+    
+<script src="/js/libs/pjax.min.js"></script>
+
+<script>
+    window.addEventListener('DOMContentLoaded', () => {
+        window.pjax = new Pjax({
+            selectors: [
+                'head title',
+                '.page-container',
+                '.pjax'
+            ],
+            history: true,
+            debug: false,
+            cacheBust: false,
+            timeout: 0,
+            analytics: false,
+            currentUrlFullReload: false,
+            scrollRestoration: false,
+            // scrollTo: true,
+        });
+
+        document.addEventListener('pjax:send', () => {
+            KEEP.utils.pjaxProgressBarStart();
+        });
+
+        document.addEventListener('pjax:complete', () => {
+            KEEP.utils.pjaxProgressBarEnd();
+            window.pjax.executeScripts(document.querySelectorAll('script[data-pjax], .pjax script'));
+            KEEP.refresh();
+        });
+    });
+</script>
+
+
+
+</body>
+</html>
